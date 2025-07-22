@@ -1,101 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
+# API de Extração de Texto de Imagens - DRF
 
-  <h1>📄🖼️ Image Text Extraction API - DRF</h1>
-    <p class="status">⚠️ This project is still under development ⚠️</p>
-    <p>The Image Text Extraction API - DRF is an OCR (Optical Character Recognition) API built with Django REST Framework. Its goal is to extract readable text from images, serving as a foundation for applications like data automation, document analysis, and accessibility tools.</p>
+⚠️ **Este projeto está sendo refatorado** ⚠️
 
-  <h2>🛠 STAR Methodology</h2>
+A **API de Extração de Texto de Imagens - DRF** é uma API de OCR (Reconhecimento Óptico de Caracteres) construída com Django REST Framework. Seu objetivo é extrair texto legível de imagens, servindo como base para aplicações como automação de dados, análise de documentos e ferramentas de acessibilidade.
 
-  <h3>🏞️ Situation</h3>
-    <p>Manually extracting text from images, such as scanned documents, receipts, or ID cards, is time-consuming and prone to errors.</p>
+---
 
-  <h3>🎯 Task</h3>
-    <p>Develop a REST API that receives an image and automatically returns the extracted text using OCR technologies.</p>
+## Metodologia STAR
 
-  <h3>🏃‍♂️ Action</h3>
-    <ul>
-        <li>Built a REST API using Django REST Framework.</li>
-        <li>Implemented Tesseract as the OCR engine.</li>
-        <li>Structured endpoints for future integration with a React frontend.</li>
-        <li>Prepared the foundation for user authentication and access control.</li>
-    </ul>
+### Situação
+Extrair manualmente texto de imagens, como documentos escaneados, recibos ou carteiras de identidade, é um processo demorado e sujeito a erros.
 
-  <h3>🎯 Result</h3>
-    <ul>
-        <li>The API can now process images via an endpoint and return extracted text.</li>
-        <li>Ready for integration with web applications.</li>
-        <li>Scalable for future enhancements, such as authentication, permissions, and advanced features.</li>
-    </ul>
+### Tarefa
+Desenvolver uma API REST que receba uma imagem e retorne automaticamente o texto extraído utilizando tecnologias de OCR.
 
-  <h2>🚀 How to Run the Project</h2>
+### Ação
+- Construção da API REST com Django REST Framework.
+- Implementação do Tesseract como motor OCR.
+- Estruturação dos endpoints para futura integração com um frontend em React.
+- Preparação da base para autenticação e controle de acesso.
 
-  <h3>1. Clone the Repository</h3>
-    <pre><code>git clone https://github.com/kailanesarah/image-text-extraction-API-DRF.git
-cd image-text-extraction-API-DRF</code></pre>
+### Resultado
+- A API já consegue processar imagens por meio de um endpoint e retornar o texto extraído.
+- Pronta para integração com aplicações web.
+- Escalável para futuras melhorias como autenticação, permissões e recursos avançados.
 
-  <h3>2. Configure Environment Variables</h3>
-    <pre><code>DJANGO_SECRET_KEY='your_secret_key'
-DB_NAME='database_name'
-DB_USER='database_user'
-DB_PASSWORD='database_password'</code></pre>
+---
 
-  <h3>3. Install Dependencies</h3>
-    <pre><code>pip install -r requirements.txt</code></pre>
+## 🚀 Como Executar o Projeto
 
-  <h3>4. Run Migrations</h3>
-    <pre><code>python manage.py migrate</code></pre>
+### 1.  Clonar o Repositório
 
-  <h3>5. (Optional) Create a Superuser</h3>
-    <pre><code>python manage.py createsuperuser</code></pre>
+```bash
+git clone https://github.com/kailanesarah/image-text-extraction-API-DRF.git
+cd image-text-extraction-API-DRF
+```
 
-  <h3>6. Start the Server</h3>
-    <pre><code>python manage.py runserver</code></pre>
+### 2. Configurar Variáveis de Ambiente
 
-   <p>Access the project at: <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></p>
+```bash
+DJANGO_SECRET_KEY='sua_chave_secreta'
+DB_NAME='nome_do_banco'
+DB_USER='usuario_do_banco'
+DB_PASSWORD='senha_do_banco'
 
-  <h2>🌍 Current Endpoints (Under development)</h2>
+```
 
-  <h3>🔹 OCR (Text Extraction)</h3>
-    <table>
-        <tr>
-            <th>Method</th>
-            <th>Endpoint</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td>POST</td>
-            <td>/ocr/extract-text/</td>
-            <td>Sends an image and receives the extracted text.</td>
-        </tr>
-    </table>
+### 3. Instalar Dependências
+```bash
+pip install -r requirements.txt
 
-  <h3>Example Response:</h3>
-    <pre><code>{
-  "text": "Extracted text from the image"
-}</code></pre>
+```
 
-  <h2>🔮 Future Features</h2>
-    <ul>
-        <li>Integration with a React frontend for testing and real-world usage.</li>
-        <li>Authentication using JWT and refresh token.</li>
-        <li>Access control by user level (admin, regular user).</li>
-        <li>History of processed images per user.</li>
-        <li>Support for PDFs and multiple images.</li>
-        <li>Modern interface with real-time feedback.</li>
-    </ul>
+### 4. Aplicar Migrações
+```bash
+python manage.py migrate
 
-  <h2>📩 Contact</h2>
-    <p>If you have any questions or suggestions, feel free to reach out!</p>
-    <p>📧 Email: <a href="mailto:kailanesarahpro@gmail.com">kailanesarahpro@gmail.com</a></p>
-    <p>🔗 GitHub: <a href="https://github.com/kailanesarah">https://github.com/kailanesarah</a></p>
+```
 
-   <p>⭐ If you liked the project, please leave a star on the repository! 🚀</p>
+### 5. Iniciar o Servidor
+```bash
+python manage.py runserver
+#Acesse o projeto em: http://127.0.0.1:8000/
+```
 
-</body>
-</html>
+## Endpoints Disponíveis (em desenvolvimento)
+
+### Extração de Texto com OCR
+
+Este endpoint permite o envio de uma imagem para que o texto contido nela seja automaticamente extraído utilizando tecnologia OCR (Reconhecimento Óptico de Caracteres).
+
+| Método | Endpoint             | Descrição                                       |
+|--------|----------------------|-------------------------------------------------|
+| POST   | `/ocr/extract-text/` | Recebe uma imagem e retorna o texto reconhecido. |
+
+
+---
+
+## Refatoração e melhorias em progresso
+
+O projeto está passando por uma fase de refatoração para tornar o código mais limpo, modular e escalável. As principais melhorias em andamento incluem:
+
+- **Modularização do código**: separação das responsabilidades em serviços, utilitários e views para facilitar manutenção e testes.
+- **Limpeza e organização**: remoção de redundâncias e reestruturação do código para maior legibilidade.
+- **Migração para PostgreSQL**: substituição do banco SQLite pelo PostgreSQL, garantindo maior robustez, segurança e compatibilidade com ambientes de produção.
+- **Melhoria no tratamento de imagem**:
+  - Redimensionamento e conversão padronizada antes do processamento.
+  - Detecção de arquivos inválidos ou corrompidos.
+  - Melhor integração com o Tesseract para resultados mais precisos.
+- **Validações aprimoradas**: verificação do tipo e conteúdo da imagem enviada antes de processar.
+- **Preparação para testes automatizados**: estrutura base para testes unitários e de integração com `pytest` ou `unittest`.
+- **Base para autenticação JWT**: preparando o sistema para autenticação segura com níveis de acesso diferenciados.
+- **Preparação para deploy**: ajustes na estrutura do projeto e arquivos como `Dockerfile` e `Procfile` para facilitar deploy em serviços como Heroku, Railway ou Render.
+
+Essas melhorias visam deixar o projeto mais robusto e pronto para ambientes de produção e escalabilidade futura.
+
+---
+
+## ⚖Licença
+
+Este projeto está licenciado sob a [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/deed.pt-br).
+
+Você pode:
+- Usar o código para fins pessoais e educacionais.
+- Estudar, modificar e compartilhar com créditos à autora.
+- Contribuir para o projeto via pull requests.
+
+**Não é permitido:**
+- Usar o código para fins comerciais.
+- Vender, sublicenciar ou distribuir este projeto com fins lucrativos.
+
+> © 2025 [Kailane Sarah](https://github.com/kailanesarah) – Compartilhe conhecimento, mas com respeito! 💜
+
